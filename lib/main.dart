@@ -5,13 +5,11 @@ import 'package:base_project_flutter/constants/constants.dart';
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/views/bottomNavigation.dart/bottomNavigation.dart';
 import 'package:base_project_flutter/views/homePage/components/homepageservices.dart';
-import 'package:base_project_flutter/views/homePage/components/topdoctors/topDoctorDetailsPage.dart';
 import 'package:base_project_flutter/views/homePage/homePage.dart';
 import 'package:base_project_flutter/views/locationError/locationError.dart';
 import 'package:base_project_flutter/views/myDoctorPage/components/doctor.dart';
 import 'package:base_project_flutter/views/myDoctorPage/components/psikolog.dart';
 import 'package:base_project_flutter/views/myDoctorPage/myDoctor.dart';
-// import 'package:base_project_flutter/views/onBoardingpage/introductionScreen.dart';
 import 'package:base_project_flutter/views/onBoardingpage/onBoardingPage.dart';
 import 'package:base_project_flutter/views/profilePage/edit_details_page.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +97,7 @@ class MyApp extends StatelessWidget {
               // is not restarted.
               primarySwatch: Colors.blue,
             ),
-            home: HomePage()
+            home: BottomNavigation()
             // AnimatedSplashScreen(
             //     duration: 1000,
             //     splash: Image.asset(

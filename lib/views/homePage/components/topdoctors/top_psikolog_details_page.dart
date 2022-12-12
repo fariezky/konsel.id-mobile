@@ -8,14 +8,14 @@ import '../../../../responsive.dart';
 import '../../../bookAppointment/bookAppointment.dart';
 import '../../../bottomSheet/bottomSheetPage.dart';
 
-class TopDoctorDetailsPage extends StatefulWidget {
-  const TopDoctorDetailsPage({Key? key}) : super(key: key);
+class TopPsikologDetailsPage extends StatefulWidget {
+  const TopPsikologDetailsPage({Key? key}) : super(key: key);
 
   @override
-  State<TopDoctorDetailsPage> createState() => _TopDoctorDetailsPageState();
+  State<TopPsikologDetailsPage> createState() => _TopPsikologDetailsPageState();
 }
 
-class _TopDoctorDetailsPageState extends State<TopDoctorDetailsPage> {
+class _TopPsikologDetailsPageState extends State<TopPsikologDetailsPage> {
   Widget searchWidget() {
     return Row(
       children: [

@@ -3,15 +3,11 @@ import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/models/servicesModel.dart';
 import 'package:base_project_flutter/responsive.dart';
-
-import 'package:base_project_flutter/views/homePage/components/topdoctors/topDoctorDetailsPage.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../bookAppointment/bookAppointment.dart';
 import '../bottomNavigation.dart/bottomNavigation.dart';
-
 
 class Favorite_Psikolog_Screen extends StatelessWidget {
   const Favorite_Psikolog_Screen({Key? key}) : super(key: key);
@@ -21,32 +17,21 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
     return Scaffold(
       backgroundColor: tWhite,
       appBar: AppBar(
-        leading: GestureDetector(onTap: (){
-          Twl.navigateBack(context);
-        },
-        child: Icon(Icons.arrow_back,color: tPrimaryColor,),),
         title: Text(
           'Favorite Psikolog',
-          style: TextStyle(fontWeight: FontWeight.w600,
-           fontSize: isTab(context) ? 10.sp : 13.sp,),
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: isTab(context) ? 10.sp : 13.sp,
+          ),
         ),
 
         centerTitle: true,
         // toolbarHeight: 70,
-      elevation: 1,
+        elevation: 1,
         automaticallyImplyLeading: false,
         backgroundColor: tWhite,
         foregroundColor: tPrimaryColor,
         actions: [
-          GestureDetector(
-            onTap: () {},
-            child: Padding(
-              padding: EdgeInsets.only(
-                right: 10,
-              ),
-              child: Image.asset(Images.NOTIFICATION,scale: 4,)
-            ),
-          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -66,19 +51,18 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                     children: [
                       Container(
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal:15),
+                        padding: EdgeInsets.symmetric(horizontal: 15),
                         decoration: BoxDecoration(
                           color: Colors.blueGrey[100],
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [tCardBoxShadow],
                           // border: Border.all( color: Colors.white)
                         ),
-
                         child: TextField(
                           decoration: InputDecoration(
                               contentPadding: EdgeInsets.all(8),
                               prefixIcon: Container(
-                                margin: EdgeInsets.only(top:3),
+                                margin: EdgeInsets.only(top: 3),
                                 child: Image.asset(
                                   Images.SEARCH1,
                                   color: Colors.grey[600],
@@ -96,15 +80,17 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                                 color: Colors.grey[600],
                                 fontSize: isTab(context) ? 8.sp : 13.sp,
                                 fontWeight: FontWeight.w500,
-                              )
-                          ),
+                              )),
                         ),
                       )
                     ],
                   ),
                 ),
+
                 /// CARD ////////////////////////////////////
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -112,14 +98,12 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                         BoxShadow(
                             color: tlightGray,
                             blurRadius: 5.0,
-                            offset: Offset(0,0)
-                        )
-                      ]
-                  ),
+                            offset: Offset(0, 0))
+                      ]),
                   child: Card(
                     // color: tGray,
                     // elevation: 3,
-                    margin: EdgeInsets.symmetric(vertical:5, horizontal: 3),
+                    margin: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
                     // width: 60.w,
                     // height: 40.h,
                     child: Column(
@@ -130,33 +114,41 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                             children: [
                               /// Image Circle ///////////////////////////////////
                               Container(
-                                margin: EdgeInsets.only(left: 12, top:10),
+                                margin: EdgeInsets.only(left: 12, top: 10),
                                 width: 70,
                                 height: 70,
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.green,
-                                    image: DecorationImage(image: NetworkImage('https://placeimg.com/100/100'))
-                                ),
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://placeimg.com/100/100'))),
                               ),
-                              SizedBox(width: 10,),
+                              SizedBox(
+                                width: 10,
+                              ),
+
                               /// Text Group ////////////////////////////////////////
                               Expanded(
                                 child: Container(
                                   // color: Colors.teal,
-                                  margin: EdgeInsets.only(top:10, left: 12),
+                                  margin: EdgeInsets.only(top: 10, left: 12),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text('Narashima, M.Psi',
+                                      Text(
+                                        'Narashima, M.Psi',
                                         style: TextStyle(
-                                            fontSize: isTab(context) ? 9.sp : 14.sp,
-                                            fontWeight: FontWeight.w500
-                                        ),
+                                            fontSize:
+                                                isTab(context) ? 9.sp : 14.sp,
+                                            fontWeight: FontWeight.w500),
                                       ),
-                                      Text("Psikolog",
+                                      Text(
+                                        "Psikolog",
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 12.sp,
+                                          fontSize:
+                                              isTab(context) ? 9.sp : 12.sp,
                                           fontWeight: FontWeight.w400,
                                           color: tlightGray,
                                         ),
@@ -167,13 +159,14 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+
                               /// Icon Heart/////////////////////////////////////
                               Container(
                                 width: 30,
                                 height: 30,
                                 // color: tBlue,
                                 alignment: Alignment.center,
-                                margin: EdgeInsets.only(right: 12, top:10),
+                                margin: EdgeInsets.only(right: 12, top: 10),
                                 decoration: BoxDecoration(
                                   color: tSecondaryGary,
                                   borderRadius: BorderRadius.circular(10),
@@ -200,10 +193,15 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
                         ),
+
                         /// Next Available
                         Container(
-                          margin: EdgeInsets.only(right: 12, left: 12,top: 10),
-                          padding: EdgeInsets.only(left: 10,top: 5, bottom: 5,),
+                          margin: EdgeInsets.only(right: 12, left: 12, top: 10),
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            top: 5,
+                            bottom: 5,
+                          ),
                           // color: Colors.yellow,
                           decoration: BoxDecoration(
                             // boxShadow: [tCardBoxShadow],
@@ -218,8 +216,7 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: isTab(context) ? 9.sp : 10.sp,
                                     fontWeight: FontWeight.w500,
-                                    color: tPrimaryColor
-                                ),
+                                    color: tPrimaryColor),
                               ),
                               Text(
                                 '11:00-12:00',
@@ -231,16 +228,20 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                             ],
                           ),
                         ),
+
                         /// BUTTON ////////////////////////////////
                         Container(
-                          margin: EdgeInsets.only(bottom: 12, right: 12,top: 5),
-                          width:double.infinity,
+                          margin:
+                              EdgeInsets.only(bottom: 12, right: 12, top: 5),
+                          width: double.infinity,
                           alignment: Alignment.bottomRight,
                           child: GestureDetector(
                             onTap: () {
                               Twl.navigateTo(
-                                  context, BookAppointmentScreen(index: 0,)
-                              );
+                                  context,
+                                  BookAppointmentScreen(
+                                    index: 0,
+                                  ));
                             },
                             child: Container(
                               margin: EdgeInsets.only(top: 10),
@@ -274,14 +275,12 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                         BoxShadow(
                             color: tlightGray,
                             blurRadius: 5.0,
-                            offset: Offset(0,0)
-                        )
-                      ]
-                  ),
+                            offset: Offset(0, 0))
+                      ]),
                   child: Card(
                     // color: tGray,
                     // elevation: 3,
-                    margin: EdgeInsets.symmetric(vertical:5, horizontal: 3),
+                    margin: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
                     // width: 60.w,
                     // height: 40.h,
                     child: Column(
@@ -292,33 +291,41 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                             children: [
                               /// Image Circle ///////////////////////////////////
                               Container(
-                                margin: EdgeInsets.only(left: 12, top:10),
+                                margin: EdgeInsets.only(left: 12, top: 10),
                                 width: 70,
                                 height: 70,
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.green,
-                                    image: DecorationImage(image: NetworkImage('https://placeimg.com/100/100'))
-                                ),
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://placeimg.com/100/100'))),
                               ),
-                              SizedBox(width: 10,),
+                              SizedBox(
+                                width: 10,
+                              ),
+
                               /// Text Group ////////////////////////////////////////
                               Expanded(
                                 child: Container(
                                   // color: Colors.teal,
-                                  margin: EdgeInsets.only(top:10, left: 12),
+                                  margin: EdgeInsets.only(top: 10, left: 12),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text('Narashima, M.Psi',
+                                      Text(
+                                        'Narashima, M.Psi',
                                         style: TextStyle(
-                                            fontSize: isTab(context) ? 9.sp : 14.sp,
-                                            fontWeight: FontWeight.w500
-                                        ),
+                                            fontSize:
+                                                isTab(context) ? 9.sp : 14.sp,
+                                            fontWeight: FontWeight.w500),
                                       ),
-                                      Text("Psikolog",
+                                      Text(
+                                        "Psikolog",
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 12.sp,
+                                          fontSize:
+                                              isTab(context) ? 9.sp : 12.sp,
                                           fontWeight: FontWeight.w400,
                                           color: tlightGray,
                                         ),
@@ -329,13 +336,14 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+
                               /// Icon Heart/////////////////////////////////////
                               Container(
                                 width: 30,
                                 height: 30,
                                 // color: tBlue,
                                 alignment: Alignment.center,
-                                margin: EdgeInsets.only(right: 12, top:10),
+                                margin: EdgeInsets.only(right: 12, top: 10),
                                 decoration: BoxDecoration(
                                   color: tSecondaryGary,
                                   borderRadius: BorderRadius.circular(10),
@@ -362,10 +370,15 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
                         ),
+
                         /// Next Available
                         Container(
-                          margin: EdgeInsets.only(right: 12, left: 12,top: 10),
-                          padding: EdgeInsets.only(left: 10,top: 5, bottom: 5,),
+                          margin: EdgeInsets.only(right: 12, left: 12, top: 10),
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            top: 5,
+                            bottom: 5,
+                          ),
                           // color: Colors.yellow,
                           decoration: BoxDecoration(
                             // boxShadow: [tCardBoxShadow],
@@ -380,8 +393,7 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: isTab(context) ? 9.sp : 10.sp,
                                     fontWeight: FontWeight.w500,
-                                    color: tPrimaryColor
-                                ),
+                                    color: tPrimaryColor),
                               ),
                               Text(
                                 '11:00-12:00',
@@ -393,16 +405,20 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                             ],
                           ),
                         ),
+
                         /// BUTTON ////////////////////////////////
                         Container(
-                          margin: EdgeInsets.only(bottom: 12, right: 12,top: 5),
-                          width:double.infinity,
+                          margin:
+                              EdgeInsets.only(bottom: 12, right: 12, top: 5),
+                          width: double.infinity,
                           alignment: Alignment.bottomRight,
                           child: GestureDetector(
                             onTap: () {
                               Twl.navigateTo(
-                                  context, BookAppointmentScreen(index: 0,)
-                              );
+                                  context,
+                                  BookAppointmentScreen(
+                                    index: 0,
+                                  ));
                             },
                             child: Container(
                               margin: EdgeInsets.only(top: 10),
@@ -429,7 +445,6 @@ class Favorite_Psikolog_Screen extends StatelessWidget {
                     ),
                   ),
                 ),
-
               ],
             ),
           ),

@@ -3,8 +3,7 @@ import 'package:base_project_flutter/constants/constants.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/models/servicesModel.dart';
 import 'package:base_project_flutter/responsive.dart';
-
-import 'package:base_project_flutter/views/homePage/components/topdoctors/topDoctorDetailsPage.dart';
+import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -61,7 +60,7 @@ class ServicesHomePage extends StatelessWidget {
               final item = DUMMY_SERVCES[index];
               return GestureDetector(
                 onTap: () {
-                  Twl.navigateTo(context, TopDoctorDetailsPage());
+                  Twl.navigateTo(context, TopPsikologDetailsPage());
                 },
                 child: Card(
                   elevation: 0,

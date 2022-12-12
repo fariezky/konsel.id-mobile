@@ -17,19 +17,22 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        title: Text(
+          'My Appointment',
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: isTab(context) ? 10.sp : 13.sp,
+          ),
+        ),
+
+        centerTitle: true,
+        // toolbarHeight: 70,
+        elevation: 1,
+        automaticallyImplyLeading: false,
         backgroundColor: tWhite,
         foregroundColor: tPrimaryColor,
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-        title: Text(
-          'My Appointments',
-          style: TextStyle(
-              fontSize: isTab(context) ? 9.sp : 12.sp,
-              fontWeight: FontWeight.w600,
-              color: tBlack
-              ),
-        ),
+        actions: [
+        ],
       ),
       // body: DefaultTabController(
       //     length: 2,

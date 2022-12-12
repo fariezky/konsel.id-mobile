@@ -1,10 +1,10 @@
 import 'package:base_project_flutter/responsive.dart';
-import 'package:base_project_flutter/views/appointment/myAppoinment.dart';
 import 'package:base_project_flutter/views/homePage/homePage.dart';
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import '../../constants/imageConstant.dart';
 import '../FavoritePage/favorite_psikolog_screen.dart';
+import '../appointment/my_appoinment.dart';
 import '../profilePage/profile_page.dart';
 class BottomNavigation extends StatefulWidget {
   BottomNavigation({Key? key, this.tabIndexId}) : super(key: key);

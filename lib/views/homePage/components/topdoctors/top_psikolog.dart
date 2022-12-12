@@ -2,20 +2,20 @@ import 'package:base_project_flutter/constants/constants.dart';
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/responsive.dart';
-import 'package:base_project_flutter/views/homePage/components/topdoctors/topDoctorDetailsPage.dart';
+import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../bookAppointment/bookAppointment.dart';
 
-class TopDoctors extends StatefulWidget {
-  const TopDoctors({Key? key}) : super(key: key);
+class TopPsikolog extends StatefulWidget {
+  const TopPsikolog({Key? key}) : super(key: key);
 
   @override
-  State<TopDoctors> createState() => _TopDoctorsState();
+  State<TopPsikolog> createState() => _TopPsikologState();
 }
 
-class _TopDoctorsState extends State<TopDoctors> {
+class _TopPsikologState extends State<TopPsikolog> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +31,7 @@ class _TopDoctorsState extends State<TopDoctors> {
               margin: EdgeInsets.only(left: 7),
               child: GestureDetector(
                 onTap: () {
-                  Twl.navigateTo(context, TopDoctorDetailsPage());
+                  Twl.navigateTo(context, TopPsikologDetailsPage());
                 },
                 child: Card(
                   elevation: 0,
