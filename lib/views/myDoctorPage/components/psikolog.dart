@@ -25,7 +25,7 @@ class _PsikologScreenState extends State<PsikologScreen> {
       backgroundColor: tWhite,
       appBar: AppBar(
         leading: GestureDetector(onTap: (){
-          Twl.navigateBack(context);
+          Twl.navigateTo(context, BottomNavigation());
         },
           child: Icon(Icons.arrow_back,color: tPrimaryColor,),),
         title: Text(

@@ -1,13 +1,10 @@
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/views/bottomNavigation.dart/bottomNavigation.dart';
-
-import 'package:base_project_flutter/views/locationPage/locationPage.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../constants/constants.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../responsive.dart';
 import '../logiPage/login_page.dart';
 
@@ -23,11 +20,8 @@ class Register_Success_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SingleChildScrollView(
-
         child: Form(
-
           key: _formKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -38,7 +32,6 @@ class Register_Success_Screen extends StatelessWidget {
                 SizedBox(
                   height: 1.h,
                 ),
-
 
                 Card(
                   elevation: 0,
@@ -51,12 +44,10 @@ class Register_Success_Screen extends StatelessWidget {
                     ),
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-
                         SizedBox(
                           height: 120,
                         ),
@@ -64,45 +55,41 @@ class Register_Success_Screen extends StatelessWidget {
                           // height: 30.h,
                           child: Center(
                               child: Image.asset(
-                                Images.PASSWORDCOMPLETE,
-                                scale: 2,
-                              )
-                            // FlutterLogo(
-                            //   size:isTab(context)? 40.h :65.h,
-                            // ),
-                          ),
+                            Images.PASSWORDCOMPLETE,
+                            scale: 2,
+                          )
+                              // FlutterLogo(
+                              //   size:isTab(context)? 40.h :65.h,
+                              // ),
+                              ),
                         ),
                         SizedBox(
                           height: 50,
                         ),
-
-
                         Center(
                           child: Container(
                             width: 1000,
                             child: Text(
                               "Selamat Anda baru saja menyelesaikan Registrasi akun. Sekarang Anda sudah bisa menuju ke halaman Login.",
-                              style: TextStyle(color: tBlack, fontSize: isTab(context) ? 6.sp : 9.sp, ),
+                              style: TextStyle(
+                                color: tBlack,
+                                fontSize: isTab(context) ? 6.sp : 9.sp,
+                              ),
                               textAlign: TextAlign.center,
                             ),
                           ),
                         ),
-
-
                         SizedBox(
                           height: 30,
                         ),
-
                         Divider(
                           color: tDividerColor,
                           thickness: 1,
                           height: 2,
                         ),
-
                         SizedBox(
                           height: 30,
                         ),
-
                         GestureDetector(
                           onTap: () {
                             Twl.navigateTo(context, LoginPage());
@@ -129,10 +116,6 @@ class Register_Success_Screen extends StatelessWidget {
                         SizedBox(
                           height: 10.h,
                         ),
-
-
-
-
                       ],
                     ),
                   ),
@@ -152,16 +135,13 @@ class Register_Success_Screen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
       padding: EdgeInsets.symmetric(horizontal: 10),
-
       child: Text(
         title,
         style: TextStyle(
             fontSize: isTab(context) ? 12.sp : 14.sp,
             fontWeight: FontWeight.bold,
-            color: tBlackColor
-        ),
+            color: tBlackColor),
       ),
     );
   }
 }
-

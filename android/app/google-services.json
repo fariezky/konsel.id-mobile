@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565461929738",
+    "project_id": "konsel-f56ec",
+    "storage_bucket": "konsel-f56ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565461929738:android:242082572fe2b81c0b34f3",
+        "android_client_info": {
+          "package_name": "com.example.base_project_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565461929738-t15aesubkhe69usfkrfh1mrc23kcn8ah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6MUXwQriVtcAE3lPpb3AlmDF4TmDGQkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565461929738-t15aesubkhe69usfkrfh1mrc23kcn8ah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

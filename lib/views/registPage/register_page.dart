@@ -10,7 +10,6 @@ import 'package:sizer/sizer.dart';
 import '../logiPage/login_page.dart';
 import 'verification.dart';
 
-
 import '../../responsive.dart';
 
 class Register_Screen extends StatelessWidget {
@@ -20,9 +19,9 @@ class Register_Screen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _passwordConfirmationController = TextEditingController();
+  final TextEditingController _passwordConfirmationController =
+      TextEditingController();
   final TextEditingController _schoolNameController = TextEditingController();
-
 
   final _formKey = new GlobalKey<FormState>();
 
@@ -35,16 +34,15 @@ class Register_Screen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Daftar",
-          style: TextStyle(fontWeight: FontWeight.bold, ),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
           textAlign: TextAlign.center,
-
         ),
         elevation: 1.0,
       ),
       body: SingleChildScrollView(
-
         child: Form(
-
           key: _formKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -55,7 +53,6 @@ class Register_Screen extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-
 
                 Card(
                   elevation: 0,
@@ -76,7 +73,6 @@ class Register_Screen extends StatelessWidget {
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
                           child: TextFormField(
-
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "Nama harus diisi";
@@ -121,14 +117,10 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
-
-
                         Padding(
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
                           child: TextFormField(
-
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "Email harus diisi";
@@ -173,12 +165,10 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
                         Padding(
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
                           child: TextFormField(
-
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "No. Telp harus diisi";
@@ -223,14 +213,10 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
-
-
                         Padding(
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
                           child: TextFormField(
-
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "Kata sandi harus diisi";
@@ -279,14 +265,10 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
-
-
                         Padding(
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
                           child: TextFormField(
-
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "Konfirmasi kata sandi harus diisi";
@@ -335,12 +317,10 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
                         Padding(
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
                           child: TextFormField(
-
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "NPSN/asal sekolah harus diisi";
@@ -385,33 +365,17 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
-
-
                         SizedBox(
                           height: 20,
                         ),
-
                         Divider(
                           color: tDividerColor,
                           thickness: 1,
                           height: 2,
                         ),
-
                         SizedBox(
                           height: 30,
                         ),
-
-
-
-
-
-
-
-
-
-
-
                         GestureDetector(
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
@@ -440,27 +404,31 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 20,
                         ),
-
-
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               "Sudah punya akun? ",
-                              style: TextStyle(color: tBlack, fontSize: isTab(context) ? 6.sp : 9.sp,),
+                              style: TextStyle(
+                                color: tBlack,
+                                fontSize: isTab(context) ? 6.sp : 9.sp,
+                              ),
                             ),
                             GestureDetector(
-                              onTap: (){
+                              onTap: () {
                                 Twl.navigateTo(context, LoginPage());
                               },
                               child: Text(
                                 "Login.",
-                                style: TextStyle(color: tPrimaryColor, fontWeight: FontWeight.bold, fontSize: isTab(context) ? 6.sp : 9.sp,),
+                                style: TextStyle(
+                                  color: tPrimaryColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: isTab(context) ? 6.sp : 9.sp,
+                                ),
                               ),
                             ),
                           ],
                         ),
-
                       ],
                     ),
                   ),

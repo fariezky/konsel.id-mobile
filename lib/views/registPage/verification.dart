@@ -3,8 +3,6 @@
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/views/bottomNavigation.dart/bottomNavigation.dart';
-
-import 'package:base_project_flutter/views/locationPage/locationPage.dart';
 import 'package:base_project_flutter/views/registPage/term_condition_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';

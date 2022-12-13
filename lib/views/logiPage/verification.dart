@@ -3,7 +3,6 @@
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/views/bottomNavigation.dart/bottomNavigation.dart';
-import 'package:base_project_flutter/views/locationPage/locationPage.dart';
 import 'package:base_project_flutter/views/logiPage/reset_password_page.dart';
 import 'package:base_project_flutter/views/registPage/register_page.dart';
 import 'package:flutter/material.dart';
