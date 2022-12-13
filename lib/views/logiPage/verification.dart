@@ -35,8 +35,6 @@ class VerificationPage extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-
                 SizedBox(
                   height: 1.0.h,
                 ),
@@ -45,7 +43,9 @@ class VerificationPage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Container(
-                    margin: EdgeInsets.only(top: 20,),
+                    margin: EdgeInsets.only(
+                      top: 20,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: tWhite,
@@ -63,11 +63,9 @@ class VerificationPage extends StatelessWidget {
                               fontSize: isTab(context) ? 13.sp : 16.sp,
                               fontWeight: FontWeight.w700),
                         ),
-
                         Text(
                           'Masukkan verifikasi kode',
                           style: TextStyle(
-
                               color: tBlack,
                               fontSize: isTab(context) ? 9.sp : 11.sp,
                               fontWeight: FontWeight.w300),
@@ -107,8 +105,9 @@ class VerificationPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                             fieldHeight: isTab(context) ? 9.w : 12.w,
                             fieldWidth: isTab(context) ? 9.w : 12.w,
-                            activeFillColor:
-                            hasError ? Color(0xFFFAFAFA) : Color(0xFFFAFAFA),
+                            activeFillColor: hasError
+                                ? Color(0xFFFAFAFA)
+                                : Color(0xFFFAFAFA),
                           ),
                           cursorColor: tBlack,
                           animationDuration: Duration(milliseconds: 300),
@@ -138,36 +137,38 @@ class VerificationPage extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-
-
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               "Belum mendapat kode? ",
-                              style: TextStyle(color: tBlack, fontSize: isTab(context) ? 6.sp : 9.sp,),
+                              style: TextStyle(
+                                color: tBlack,
+                                fontSize: isTab(context) ? 6.sp : 9.sp,
+                              ),
                             ),
                             GestureDetector(
-                              onTap: (){},
+                              onTap: () {},
                               child: Text(
                                 "Kirim ulang dalam 01:00",
-                                style: TextStyle(color: tPrimaryColor, fontWeight: FontWeight.bold, fontSize: isTab(context) ? 6.sp : 9.sp,),
+                                style: TextStyle(
+                                  color: tPrimaryColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: isTab(context) ? 6.sp : 9.sp,
+                                ),
                               ),
                             ),
                           ],
                         ),
-
                         SizedBox(
                           height: 150,
                         ),
-
                         GestureDetector(
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
                               Twl.navigateTo(context, ResetPasswordPage());
                               // reset pw
                             }
-
                           },
                           child: Container(
                             padding: EdgeInsets.symmetric(
@@ -193,7 +194,6 @@ class VerificationPage extends StatelessWidget {
                         SizedBox(
                           height: 5.h,
                         ),
-
                         SizedBox(
                           height: 8.5.h,
                         ),
@@ -204,28 +204,31 @@ class VerificationPage extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "Belum punya akun? ",
-                      style: TextStyle(color: tBlack, fontSize: isTab(context) ? 6.sp : 9.sp,),
+                      style: TextStyle(
+                        color: tBlack,
+                        fontSize: isTab(context) ? 6.sp : 9.sp,
+                      ),
                     ),
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Twl.navigateTo(context, Register_Screen());
                       },
                       child: Text(
                         "Daftar.",
-                        style: TextStyle(color: tPrimaryColor, fontWeight: FontWeight.bold, fontSize: isTab(context) ? 6.sp : 9.sp,),
+                        style: TextStyle(
+                          color: tPrimaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: isTab(context) ? 6.sp : 9.sp,
+                        ),
                       ),
                     ),
                   ],
                 ),
-
-
               ],
             ),
           ),

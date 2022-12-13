@@ -47,7 +47,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: tGray,
+        unselectedItemColor: Colors.grey[800],
         selectedItemColor: tPrimaryColor,
         onTap: _onItemTapped,
         currentIndex: tabIndexs,
@@ -64,7 +64,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               height: 30,
               color: tabIndexs == 0 ? tPrimaryColor : null,
             ),
-            label: '',
+            label: 'Home',
           ),
           _bottomNavigationBarItem(
             icon: Image.asset(
@@ -72,7 +72,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               height: 30,
               color: tabIndexs == 1 ? tPrimaryColor : null,
             ),
-            label: '',
+            label: 'Favorite',
           ),
           _bottomNavigationBarItem(
             icon: Image.asset(
@@ -80,7 +80,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               height: 30,
               color: tabIndexs == 2 ? tPrimaryColor : null,
             ),
-            label: '',
+            label: 'Appointment',
           ),
           _bottomNavigationBarItem(
             icon: Image.asset(
@@ -88,7 +88,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               height: 30,
               color: tabIndexs == 3 ? tPrimaryColor : null,
             ),
-            label: '',
+            label: 'Profile',
           ),
         ],
       ),

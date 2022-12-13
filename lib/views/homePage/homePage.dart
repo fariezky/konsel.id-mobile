@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../constants/constants.dart';
 import '../../responsive.dart';
+import '../logiPage/login_page.dart';
 import 'components/topdoctors/top_psikolog.dart';
-
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -80,9 +80,9 @@ class HomePage extends StatelessWidget {
                   child: Text(
                     'Hi Lily',
                     style: TextStyle(
-                        fontSize: isTab(context) ? 13.sp : 16.sp,
-                        fontWeight: FontWeight.w400,
-                        color: tBlack),
+                        fontSize: isTab(context) ? 12.sp : 14.sp,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey[800]),
                   ),
                 ),
                 Container(
@@ -90,12 +90,11 @@ class HomePage extends StatelessWidget {
                   child: Text(
                     'How are you today?',
                     style: TextStyle(
-                        fontSize: isTab(context) ? 13.sp : 16.sp,
+                        fontSize: isTab(context) ? 10.sp : 13.sp,
                         fontWeight: FontWeight.w400,
-                        color: tBlack),
+                        color: Colors.grey[800]),
                   ),
                 ),
-
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
                   child: Card(
@@ -109,15 +108,15 @@ class HomePage extends StatelessWidget {
                         color: tWhite,
                         borderRadius: BorderRadius.circular(10),
                       ),
+                      width: 360,
                       child: Column(
                         // crossAxisAlignment: CrossAxisAlignment.start,
                         // mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-
-                          /// BANNER //////////////////////////
+                          /// BANNER IMAGE //////////////////////////
                           Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 5),
+                                vertical: 15, horizontal: 15),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -125,6 +124,25 @@ class HomePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(bottom: 10),
+                                  alignment: Alignment.center,
+                                  width:isTab(context)?30 : 150,
+                                  height:isTab(context)?40 : 35,
+                                  decoration: BoxDecoration(
+                                      color: tPrimaryColor,
+                                      borderRadius:
+                                      BorderRadius.circular(10)),
+                                  child: Text(
+                                    "Mulai Test",
+                                    style: TextStyle(color: tWhite,fontSize:  12.sp),
+                                  )
+                              ),
+                            ],
+                          )
+
                           // SizedBox(
                           //   height: 3.2.h,
                           // )
@@ -147,7 +165,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       titleWidget(
-                        context,'Psikolog',
+                        context, 'Psikolog',
                       ),
                       viewallWidget(context, () {
                         Twl.navigateTo(context, PsikologScreen(),
