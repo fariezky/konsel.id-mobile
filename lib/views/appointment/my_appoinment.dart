@@ -17,6 +17,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: tWhite,
       appBar: AppBar(
         title: Text(
           'My Appointment',

@@ -8,57 +8,58 @@ import 'package:sizer/sizer.dart';
 import '../logiPage/login_page.dart';
 
 class OnboardingPage extends StatefulWidget {
-   OnboardingPage({Key? key}) : super(key: key);
+  OnboardingPage({Key? key}) : super(key: key);
 
   @override
   _OnboardingPageState createState() => _OnboardingPageState();
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
-var currentPage = 0;
+  var currentPage = 0;
 
-bool get isLastPage => currentPage == splashData.length -1;
+  bool get isLastPage => currentPage == splashData.length - 1;
 
-var pageControll = PageController();
+  var pageControll = PageController();
 
- late List <Map<String,String>> splashData=[
-{
-  'title':'Dengan Psikolog Terbaik',
-  'suntitle':'konsultasi langsung dengan psikolog berlisensi, dan dapatkan pengalaman konsultasi terbaik.',
-  'image':'assets/images/ob3.png',
-},
-
-{
-  'title':'Lakukan Tes dengan cepat',
-  'suntitle':'Kenali Diri lebih baik dengan menjawab beberapa soal dengan cepat',
-  'image':'assets/images/ob1.png'
-},
-{
-  'title':'Tanyakan apapun kapanpun',
-  'suntitle':'Kapan saja, dimana saja, jadwalkan sesi sesuai keinginanmu.',
-  'image': 'assets/images/ob2.png'
-}
- ];
+  late List<Map<String, String>> splashData = [
+    {
+      'title': 'Dengan Psikolog Terbaik',
+      'suntitle':
+          'Konsultasi langsung dengan psikolog berlisensi, dan dapatkan pengalaman konsultasi terbaik.',
+      'image': 'assets/images/ob3.png',
+    },
+    {
+      'title': 'Lakukan Tes dengan cepat',
+      'suntitle':
+          'Kenali Diri lebih baik dengan menjawab beberapa soal dengan cepat',
+      'image': 'assets/images/ob1.png'
+    },
+    {
+      'title': 'Tanyakan apapun kapanpun',
+      'suntitle': 'Kapan saja, dimana saja, jadwalkan sesi sesuai keinginanmu.',
+      'image': 'assets/images/ob2.png'
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+
         child: SizedBox(
           width: double.infinity,
           child: Stack(
-            children:[
+            children: [
               PageView.builder(
-                  onPageChanged:(page) {
-                  setState(() {
-                    currentPage = page;
-                  });
+                  onPageChanged: (page) {
+                    setState(() {
+                      currentPage = page;
+                    });
                   },
                   controller: pageControll,
                   itemCount: splashData.length,
                   itemBuilder: (context, index) {
                     return OnboardingWidget(
-
                       title: splashData[index]['title'],
                       subtitle: splashData[index]['suntitle'],
                       image: splashData[index]['image'],
@@ -70,12 +71,13 @@ var pageControll = PageController();
               Column(
                 children: [
                   Spacer(),
+                  /// Sliderrr ////////////
                   Container(
                       alignment: Alignment.center,
-                      color: tWhite,
+                      // color: Colors.green,
                       child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 145, vertical: 40),
+                              horizontal: 145, vertical: 50),
                           child: Row(
                               // mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -83,80 +85,77 @@ var pageControll = PageController();
                                   alignment: Alignment.centerRight,
                                   // width: 50.w,
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: List.generate(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: List.generate(
                                         splashData.length,
                                         (index) => Container(
-                                                margin: EdgeInsets.all(4),
-                                                height: 6,
-                                                width:currentPage ==
-                                                        index
-                                                    ? 20
-                                                    : 20,
-                                                decoration: BoxDecoration(
-                                                    color: currentPage==index? tBlack
-                                                        : Colors.grey,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            1)),
-                                              ),
-                                            )),
-                                  ),
-                                 // Spacer(),
-                              ]))
-                  ),
-                  Builder(
-                    builder: (context) {
-                      if(currentPage == splashData.length - 1){
-                        return Container(
-                          alignment: Alignment.center,
-                          margin: EdgeInsets.only(bottom: 80),
-                          // width: 30.w,
-                          child: GestureDetector(
-                            onTap: () {
-                              Twl.navigateTo(context, LoginPage());
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width:isTab(context)?30 : 150,
-                              height:isTab(context)?40 : 35,
-                              decoration: BoxDecoration(
-                                  color: tPrimaryColor,
-                                  borderRadius:
-                                  BorderRadius.circular(10)),
-                              child: Text(
-                                "Get Started",
-                                style: TextStyle(color: tWhite,fontSize:  12.sp),
-                              ),
-                            ),
-                          ),
-                        );
-                      }
+                                          margin: EdgeInsets.all(4),
+                                          height: isTab(context) ? 3.sp : 4.sp,
+                                          width: currentPage == index ? 15.sp : 10.sp,
+                                          decoration: BoxDecoration(
+                                              color: currentPage == index
+                                                  ? tBlack : Colors.grey,
+                                              borderRadius:
+                                                  BorderRadius.circular(1)),
+                                        ),
+                                      )),
+                                ),
+                                Spacer(),
+                              ]))),
+
+                  /// tombol next dan get started ////////////////////////////////////
+                  Builder(builder: (context) {
+                    if (currentPage == splashData.length - 1) {
                       return Container(
                         alignment: Alignment.center,
                         margin: EdgeInsets.only(bottom: 80),
                         // width: 30.w,
                         child: GestureDetector(
                           onTap: () {
-                            pageControll.nextPage(duration: Duration(milliseconds: 200), curve: Curves.ease,);
+                            Twl.navigateTo(context, LoginPage());
                           },
                           child: Container(
                             alignment: Alignment.center,
-                            width:isTab(context)?30 : 150,
-                            height:isTab(context)?40 : 35,
+                            width: isTab(context) ? 30.sp : 150.sp,
+                            height: isTab(context) ? 40.sp : 35.sp,
                             decoration: BoxDecoration(
                                 color: tPrimaryColor,
-                                borderRadius:
-                                BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(10)),
                             child: Text(
-                              "Next",
-                              style: TextStyle(color: tWhite,fontSize:  12.sp),
+                              "Get Started",
+                              style: TextStyle(color: tWhite, fontSize: 12.sp),
                             ),
                           ),
                         ),
                       );
                     }
-                  ),
+
+                    return Container(
+                      alignment: Alignment.center,
+                      margin: EdgeInsets.only(bottom: 80),
+                      // width: 30.w,
+                      child: GestureDetector(
+                        onTap: () {
+                          pageControll.nextPage(
+                            duration: Duration(milliseconds: 200),
+                            curve: Curves.ease,
+                          );
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          width: isTab(context) ? 30.sp : 150.sp,
+                          height: isTab(context) ? 40.sp : 35.sp,
+                          decoration: BoxDecoration(
+                              color: tPrimaryColor,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Text(
+                            "Next",
+                            style: TextStyle(color: tWhite, fontSize: 12.sp),
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
                 ],
               )
             ],
@@ -188,6 +187,7 @@ class OnboardingWidget extends StatelessWidget {
   final titlecolor;
   final height;
   final subtitlecolor;
+
   get tprimaryColor => null;
 
   @override
@@ -213,7 +213,7 @@ class OnboardingWidget extends StatelessWidget {
             title!,
             style: TextStyle(
                 color: titlecolor,
-                fontSize:  14.sp,
+                fontSize: 14.sp,
                 fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -226,7 +226,7 @@ class OnboardingWidget extends StatelessWidget {
               style: TextStyle(
                   color: subtitlecolor,
                   height: 1.7,
-                  fontSize:  10.sp,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
             ),

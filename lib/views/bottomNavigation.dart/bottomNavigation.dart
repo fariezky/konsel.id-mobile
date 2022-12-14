@@ -1,6 +1,7 @@
 import 'package:base_project_flutter/responsive.dart';
 import 'package:base_project_flutter/views/homePage/homePage.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import '../../constants/constants.dart';
 import '../../constants/imageConstant.dart';
 import '../FavoritePage/favorite_psikolog_screen.dart';
@@ -53,7 +54,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: tabIndexs,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        iconSize: isTab(context) ? 40 : 30,
+        iconSize: isTab(context) ? 20.sp : 20.sp,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
         elevation: 0,
@@ -61,7 +62,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           _bottomNavigationBarItem(
             icon: Image.asset(
               Images.HOME2,
-              height: 30,
+              height: isTab(context) ? 15.sp : 15.sp,
               color: tabIndexs == 0 ? tPrimaryColor : null,
             ),
             label: 'Home',
@@ -69,7 +70,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           _bottomNavigationBarItem(
             icon: Image.asset(
               Images.FAVORITE,
-              height: 30,
+              height: isTab(context) ? 15.sp : 15.sp,
               color: tabIndexs == 1 ? tPrimaryColor : null,
             ),
             label: 'Favorite',
@@ -77,7 +78,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           _bottomNavigationBarItem(
             icon: Image.asset(
               Images.CALENDER,
-              height: 30,
+              height: isTab(context) ? 15.sp : 15.sp,
               color: tabIndexs == 2 ? tPrimaryColor : null,
             ),
             label: 'Appointment',
@@ -85,7 +86,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           _bottomNavigationBarItem(
             icon: Image.asset(
               Images.PROFILEIMAGE,
-              height: 30,
+              height: isTab(context) ? 15.sp : 15.sp,
               color: tabIndexs == 3 ? tPrimaryColor : null,
             ),
             label: 'Profile',
