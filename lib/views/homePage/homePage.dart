@@ -95,62 +95,62 @@ class HomePage extends StatelessWidget {
                         color: Colors.grey[800]),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
-                  child: Card(
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Container(
-                      margin: EdgeInsets.only(left: 15),
-                      decoration: BoxDecoration(
-                        boxShadow: [tCardBoxShadow],
-                        color: tWhite,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      width: 360,
-                      child: Column(
-                        // crossAxisAlignment: CrossAxisAlignment.start,
-                        // mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          /// BANNER IMAGE //////////////////////////
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 15, horizontal: 15),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset(Images.BANNER2),
-                              ],
-                            ),
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(bottom: 10),
-                                  alignment: Alignment.center,
-                                  width:isTab(context)?30 : 150,
-                                  height:isTab(context)?40 : 35,
-                                  decoration: BoxDecoration(
-                                      color: tPrimaryColor,
-                                      borderRadius:
-                                      BorderRadius.circular(10)),
-                                  child: Text(
-                                    "Mulai Test",
-                                    style: TextStyle(color: tWhite,fontSize:  12.sp),
-                                  )
-                              ),
-                            ],
-                          )
-
-                          // SizedBox(
-                          //   height: 3.2.h,
-                          // )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                // Container(
+                //   padding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+                //   child: Card(
+                //     elevation: 0,
+                //     shape: RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.circular(20)),
+                //     child: Container(
+                //       margin: EdgeInsets.only(left: 15),
+                //       decoration: BoxDecoration(
+                //         boxShadow: [tCardBoxShadow],
+                //         color: tWhite,
+                //         borderRadius: BorderRadius.circular(10),
+                //       ),
+                //       width: 360,
+                //       child: Column(
+                //         // crossAxisAlignment: CrossAxisAlignment.start,
+                //         // mainAxisAlignment: MainAxisAlignment.start,
+                //         children: [
+                //           /// BANNER IMAGE //////////////////////////
+                //           Padding(
+                //             padding: const EdgeInsets.symmetric(
+                //                 vertical: 15, horizontal: 15),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Image.asset(Images.BANNER2),
+                //               ],
+                //             ),
+                //           ),
+                //           Column(
+                //             children: [
+                //               Container(
+                //                 margin: EdgeInsets.only(bottom: 10),
+                //                   alignment: Alignment.center,
+                //                   width:isTab(context)?30 : 150,
+                //                   height:isTab(context)?40 : 35,
+                //                   decoration: BoxDecoration(
+                //                       color: tPrimaryColor,
+                //                       borderRadius:
+                //                       BorderRadius.circular(10)),
+                //                   child: Text(
+                //                     "Mulai Test",
+                //                     style: TextStyle(color: tWhite,fontSize:  12.sp),
+                //                   )
+                //               ),
+                //             ],
+                //           )
+                //
+                //           // SizedBox(
+                //           //   height: 3.2.h,
+                //           // )
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 SizedBox(
                   height: 5,
                 ),
@@ -175,13 +175,14 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 TopPsikolog(),
-                CalendarWidget(),
+                // CalendarWidget(),
                 SizedBox(
                   height: 100,
                 ),
               ],
             ),
           ),
-        ));
+        )
+    );
   }
 }
