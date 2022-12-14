@@ -6,6 +6,8 @@ import 'package:base_project_flutter/views/calendar/calendar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../calendar/calendar_event.dart';
+
 class AppointmentScreen extends StatefulWidget {
   const AppointmentScreen({Key? key}) : super(key: key);
 
