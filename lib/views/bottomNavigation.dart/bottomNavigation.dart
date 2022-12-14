@@ -47,7 +47,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Colors.grey[800],
+        unselectedItemColor: tGray2,
         selectedItemColor: tPrimaryColor,
         onTap: _onItemTapped,
         currentIndex: tabIndexs,

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">565461929738-t15aesubkhe69usfkrfh1mrc23kcn8ah.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">565461929738</string>
+    <string name="google_api_key" translatable="false">AIzaSyA6MUXwQriVtcAE3lPpb3AlmDF4TmDGQkc</string>
+    <string name="google_app_id" translatable="false">1:565461929738:android:242082572fe2b81c0b34f3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA6MUXwQriVtcAE3lPpb3AlmDF4TmDGQkc</string>
+    <string name="google_storage_bucket" translatable="false">konsel-f56ec.appspot.com</string>
+    <string name="project_id" translatable="false">konsel-f56ec</string>
+</resources>

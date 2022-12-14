@@ -98,17 +98,17 @@ class MyApp extends StatelessWidget {
               // is not restarted.
               primarySwatch: Colors.blue,
             ),
-            home: BottomNavigation()
-            // AnimatedSplashScreen(
-            //     duration: 1000,
-            //     splash: Image.asset(
-            //       Images.LOGO,
-            //       scale: 3.7,
-            //     ),
-            //     splashIconSize: 500,
-            //     nextScreen: OnboardingPage(),
-            //     splashTransition: SplashTransition.scaleTransition,
-            //     backgroundColor: Colors.white),
+            home:
+            AnimatedSplashScreen(
+                duration: 1000,
+                splash: Image.asset(
+                  Images.LOGO,
+                  scale: 3.7,
+                ),
+                splashIconSize: 500,
+                nextScreen: OnboardingPage(),
+                splashTransition: SplashTransition.scaleTransition,
+                backgroundColor: Colors.white),
             );
       },
     );

@@ -15,6 +15,7 @@ const tSecondaryColor = Color(0XFFD81B60);
 const tBorderColor = Color(0XFF9DA8E1);
 const tWhite = Color(0XFFffffff);
 const tGray = Color(0xFFECEFF1);
+const tGray2 = Color(0xFF9E9E9E);
 const tSecondaryGary = Color(0XFFE5E5E5);
 const tBackground = Color(0XFFE5E5E5);
 const tGreen = Color(0XFF5EC23A);

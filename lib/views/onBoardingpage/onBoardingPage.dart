@@ -23,20 +23,20 @@ var pageControll = PageController();
 
  late List <Map<String,String>> splashData=[
 {
-  'title':'Take A Quick Assessment',
-  'suntitle':'Answer a few questions to help us understand your preverences to start therapy. you can invite your parner.',
-  'image':'assets/images/ob1.png',
+  'title':'Dengan Psikolog Terbaik',
+  'suntitle':'konsultasi langsung dengan psikolog berlisensi, dan dapatkan pengalaman konsultasi terbaik.',
+  'image':'assets/images/ob3.png',
 },
 
 {
-  'title':'Ask When You Need It',
-  'suntitle':'People can ask their problem any time, from anywhare. Schedule a live session at a time that is convenient',
-  'image':'assets/images/ob2.png'
+  'title':'Lakukan Tes dengan cepat',
+  'suntitle':'Kenali Diri lebih baik dengan menjawab beberapa soal dengan cepat',
+  'image':'assets/images/ob1.png'
 },
 {
-  'title':'Get A The Best Psychiatry',
-  'suntitle':'Tap into the world’s largest network of licensed, accredited and experienced therapyst.',
-  'image': 'assets/images/ob3.png'
+  'title':'Tanyakan apapun kapanpun',
+  'suntitle':'Kapan saja, dimana saja, jadwalkan sesi sesuai keinginanmu.',
+  'image': 'assets/images/ob2.png'
 }
  ];
 
@@ -63,7 +63,7 @@ var pageControll = PageController();
                       subtitle: splashData[index]['suntitle'],
                       image: splashData[index]['image'],
                       titlecolor: tBlack,
-                      subtitlecolor: tBlack,
+                      subtitlecolor: tGray2,
                       height: 10.w,
                     );
                   }),
