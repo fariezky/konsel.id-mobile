@@ -21,9 +21,7 @@ class _TestScreenState extends State<TestScreen> {
       backgroundColor: tWhite,
       appBar: AppBar(
         leading: GestureDetector(
-          onTap: () {
-            Twl.navigateTo(context, BottomNavigation());
-          },
+          onTap: () => Twl.navigateBack(context),
           child: Icon(
             Icons.arrow_back,
             color: tPrimaryColor,

@@ -95,6 +95,7 @@ class MyApp extends StatelessWidget {
               // is not restarted.
               primarySwatch: Colors.blue,
             ),
+
             home: BottomNavigation()
             // AnimatedSplashScreen(
             //     duration: 1000,

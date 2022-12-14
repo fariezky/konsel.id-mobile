@@ -1,14 +1,12 @@
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/responsive.dart';
-import 'package:base_project_flutter/views/recordsPage/components/test.dart';
 import 'package:base_project_flutter/views/settings/settings.dart';
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../constants/imageConstant.dart';
+import '../Test/components/test.dart';
 import '../profilePage/profile_details_page.dart';
-import '../recordsPage/recordsPage.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({Key? key}) : super(key: key);
@@ -36,33 +34,33 @@ class DrawerPage extends StatelessWidget {
     );
   }
 
-  Widget settingsWidget(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Twl.navigateTo(context, SettingPage());
-      },
-      child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 25, vertical: 30),
-        child: Row(
-          children: [
-            Icon(
-              Icons.settings_outlined,
-              color: tWhite,
-            ),
-            SizedBox(width: 20),
-            Text(
-              'Settings',
-              style: TextStyle(
-                color: tWhite,
-                fontWeight: FontWeight.w500,
-                fontSize: isTab(context) ? 9.sp : 12.sp,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  // Widget settingsWidget(BuildContext context) {
+  //   return GestureDetector(
+  //     onTap: () {
+  //       Twl.navigateTo(context, SettingPage());
+  //     },
+  //     child: Container(
+  //       margin: EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+  //       child: Row(
+  //         children: [
+  //           Icon(
+  //             Icons.settings_outlined,
+  //             color: tWhite,
+  //           ),
+  //           SizedBox(width: 20),
+  //           Text(
+  //             'Settings',
+  //             style: TextStyle(
+  //               color: tWhite,
+  //               fontWeight: FontWeight.w500,
+  //               fontSize: isTab(context) ? 9.sp : 12.sp,
+  //             ),
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {

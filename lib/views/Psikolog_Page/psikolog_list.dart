@@ -24,9 +24,8 @@ class _PsikologScreenState extends State<PsikologScreen> {
     return Scaffold(
       backgroundColor: tWhite,
       appBar: AppBar(
-        leading: GestureDetector(onTap: (){
-          Twl.navigateTo(context, BottomNavigation());
-        },
+        leading: GestureDetector(onTap: ()=> Twl.navigateBack(context),
+
           child: Icon(Icons.arrow_back,color: tPrimaryColor,),),
         title: Text(
           'List Psikolog',
