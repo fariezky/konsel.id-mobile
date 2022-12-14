@@ -9,7 +9,6 @@ import '../../constants/constants.dart';
 import 'package:flutter/material.dart';
 import '../../constants/imageConstant.dart';
 import '../logiPage/login_page.dart';
-import '../myDoctorPage/myDoctor.dart';
 import '../recordsPage/recordsPage.dart';
 
 class ProfilePage extends StatelessWidget {

@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../constants/constants.dart';
-import '../../../constants/imageConstant.dart';
-import '../../../globalFuctions/globalFunctions.dart';
-import '../../../responsive.dart';
-import '../../bookAppointment/bookAppointment.dart';
-import '../../homePage/homePage.dart';
+import '../../constants/constants.dart';
+import '../../constants/imageConstant.dart';
+import '../../globalFuctions/globalFunctions.dart';
+import '../../responsive.dart';
+import '../bookAppointment/bookAppointment.dart';
+import '../homePage/homePage.dart';
 
 class PsikologScreen extends StatefulWidget {
   const PsikologScreen({Key? key}) : super(key: key);

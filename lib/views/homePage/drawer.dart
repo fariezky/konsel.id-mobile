@@ -7,7 +7,6 @@ import '../../constants/constants.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../constants/imageConstant.dart';
-import '../myDoctorPage/myDoctor.dart';
 import '../profilePage/profile_details_page.dart';
 import '../recordsPage/recordsPage.dart';
 

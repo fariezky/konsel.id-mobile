@@ -1,8 +1,5 @@
 import 'package:base_project_flutter/constants/constants.dart';
 import 'package:base_project_flutter/responsive.dart';
-
-import 'package:base_project_flutter/views/myDoctorPage/components/doctor.dart';
-import 'package:base_project_flutter/views/myDoctorPage/components/hospital.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -61,8 +58,7 @@ class _MyDoctorScreenState extends State<MyDoctorScreen> {
               Expanded(
                   child: Container(
                 child: TabBarView(children: [
-                 DoctorScreen(),
-                 HospitalScreen(),
+
                 ]),
               ))
             ],

@@ -2,12 +2,12 @@ import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/views/calendar/calendar_widget.dart';
 import 'package:base_project_flutter/views/homePage/drawer.dart';
-import 'package:base_project_flutter/views/myDoctorPage/components/psikolog.dart';
 import 'package:base_project_flutter/views/notification/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../constants/constants.dart';
 import '../../responsive.dart';
+import '../Psikolog_Page/psikolog_list.dart';
 import '../logiPage/login_page.dart';
 import 'components/topdoctors/top_psikolog.dart';
 
