@@ -45,7 +45,7 @@ class _PsikologScreenState extends State<PsikologScreen> {
                 padding: EdgeInsets.only(
                   right: 10,
                 ),
-                child: Image.asset(Images.NOTIFICATION,scale: 4,)
+                child: Image.asset(Images.NOTIFICATION,scale: 4,color: tPrimaryColor,)
             ),
           ),
         ],
@@ -64,38 +64,36 @@ class _PsikologScreenState extends State<PsikologScreen> {
                     children: [
                       Container(
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal:15),
+                        padding: EdgeInsets.symmetric(horizontal: 15),
                         decoration: BoxDecoration(
-                          color: Colors.blueGrey[100],
+                          color: Colors.blueGrey[50],
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [tCardBoxShadow],
                           // border: Border.all( color: Colors.white)
                         ),
-
                         child: TextField(
                           decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(8),
-                            prefixIcon: Container(
-                              margin: EdgeInsets.only(top:3),
-                              child: Image.asset(
-                                Images.SEARCH1,
-                                color: Colors.grey[600],
-                                width: 50,
-                                // fit: Null,
+                              contentPadding: EdgeInsets.all(8),
+                              prefixIcon: Container(
+                                margin: EdgeInsets.only(top: 3),
+                                child: Image.asset(
+                                  Images.SEARCH1,
+                                  color: Colors.grey[600],
+                                  width: 50,
+                                  // fit: Null,
+                                ),
                               ),
-                            ),
-                            prefixIconConstraints: BoxConstraints(
-                              maxHeight: 15,
-                              maxWidth: 20,
-                            ),
-                            border: InputBorder.none,
-                            hintText: 'Cari',
-                            hintStyle: TextStyle(
-                              color: Colors.grey[600],
-                              fontSize: isTab(context) ? 8.sp : 13.sp,
-                              fontWeight: FontWeight.w500,
-                            )
-                          ),
+                              prefixIconConstraints: BoxConstraints(
+                                maxHeight: 15,
+                                maxWidth: 20,
+                              ),
+                              border: InputBorder.none,
+                              hintText: 'Cari',
+                              hintStyle: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: isTab(context) ? 8.sp : 13.sp,
+                                fontWeight: FontWeight.w500,
+                              )),
                         ),
                       )
                     ],
@@ -105,19 +103,18 @@ class _PsikologScreenState extends State<PsikologScreen> {
                 SizedBox(height: 20,),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: tlightGray,
-                        blurRadius: 5.0,
-                        offset: Offset(0,0)
-                      )
-                    ]
-                  ),
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [
+                        // BoxShadow(
+                        //     color: tlightGray,
+                        //     blurRadius: 8.0,
+                        //     offset: Offset(-1, -1),
+                        // )
+                      ]),
                   child: Card(
-                    // color: tGray,
-                    // elevation: 3,
-                    margin: EdgeInsets.symmetric(vertical:5, horizontal: 3),
+                    color: Colors.grey[100],
+                    elevation: 5,
+                    margin: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
                     // width: 60.w,
                     // height: 40.h,
                     child: Column(
@@ -128,33 +125,41 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             children: [
                               /// Image Circle ///////////////////////////////////
                               Container(
-                                margin: EdgeInsets.only(left: 12, top:10),
+                                margin: EdgeInsets.only(left: 12, top: 10),
                                 width: 70,
                                 height: 70,
                                 decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.green,
-                                  image: DecorationImage(image: NetworkImage('https://placeimg.com/100/100'))
-                                ),
+                                    shape: BoxShape.circle,
+                                    color: Colors.green,
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://placeimg.com/100/100'))),
                               ),
-                              SizedBox(width: 10,),
+                              SizedBox(
+                                width: 10,
+                              ),
+
                               /// Text Group ////////////////////////////////////////
                               Expanded(
                                 child: Container(
                                   // color: Colors.teal,
-                                  margin: EdgeInsets.only(top:10, left: 12),
+                                  margin: EdgeInsets.only(top: 10, left: 12),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                     children: [
-                                      Text('Narashima, M.Psi',
+                                      Text(
+                                        'Narashima, M.Psi',
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 14.sp,
-                                            fontWeight: FontWeight.w500
-                                        ),
+                                            fontSize:
+                                            isTab(context) ? 9.sp : 14.sp,
+                                            fontWeight: FontWeight.w500),
                                       ),
-                                      Text("Psikolog",
+                                      Text(
+                                        "Psikolog",
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 12.sp,
+                                          fontSize:
+                                          isTab(context) ? 9.sp : 12.sp,
                                           fontWeight: FontWeight.w400,
                                           color: tlightGray,
                                         ),
@@ -165,13 +170,14 @@ class _PsikologScreenState extends State<PsikologScreen> {
                                   ),
                                 ),
                               ),
+
                               /// Icon Heart/////////////////////////////////////
                               Container(
                                 width: 30,
                                 height: 30,
                                 // color: tBlue,
                                 alignment: Alignment.center,
-                                margin: EdgeInsets.only(right: 12, top:10),
+                                margin: EdgeInsets.only(right: 12, top: 10),
                                 decoration: BoxDecoration(
                                   color: tSecondaryGary,
                                   borderRadius: BorderRadius.circular(10),
@@ -198,10 +204,15 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
                         ),
+
                         /// Next Available
                         Container(
-                          margin: EdgeInsets.only(right: 12, left: 12,top: 10),
-                          padding: EdgeInsets.only(left: 10,top: 5, bottom: 5,),
+                          margin: EdgeInsets.only(right: 12, left: 12, top: 10),
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            top: 5,
+                            bottom: 5,
+                          ),
                           // color: Colors.yellow,
                           decoration: BoxDecoration(
                             // boxShadow: [tCardBoxShadow],
@@ -212,34 +223,37 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                  'Next Available At',
-                                style: TextStyle(
-                                  fontSize: isTab(context) ? 9.sp : 10.sp,
-                                    fontWeight: FontWeight.w500,
-                                    color: tPrimaryColor
-                                ),
-                              ),
-                              Text(
-                                  '11:00-12:00',
+                                'Next Available At',
                                 style: TextStyle(
                                     fontSize: isTab(context) ? 9.sp : 10.sp,
-                                    color: tBlack,
+                                    fontWeight: FontWeight.w500,
+                                    color: tPrimaryColor),
+                              ),
+                              Text(
+                                '11:00-12:00',
+                                style: TextStyle(
+                                  fontSize: isTab(context) ? 9.sp : 10.sp,
+                                  color: tBlack,
                                 ),
                               ),
                             ],
                           ),
                         ),
+
                         /// BUTTON ////////////////////////////////
                         Container(
-                          margin: EdgeInsets.only(bottom: 12, right: 12,top: 5),
-                          width:double.infinity,
+                          margin:
+                          EdgeInsets.only(bottom: 12, right: 12, top: 5),
+                          width: double.infinity,
                           alignment: Alignment.bottomRight,
                           child: GestureDetector(
                             onTap: () {
                               Twl.navigateTo(
-                                  context, BookAppointmentScreen(index: 0,)
-                               );
-                              },
+                                  context,
+                                  BookAppointmentScreen(
+                                    index: 0,
+                                  ));
+                            },
                             child: Container(
                               margin: EdgeInsets.only(top: 10),
                               padding: EdgeInsets.symmetric(
@@ -267,19 +281,18 @@ class _PsikologScreenState extends State<PsikologScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: tlightGray,
-                        blurRadius: 5.0,
-                        offset: Offset(0,0)
-                      )
-                    ]
-                  ),
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [
+                        // BoxShadow(
+                        //     color: tlightGray,
+                        //     blurRadius: 8.0,
+                        //     offset: Offset(-1, -1),
+                        // )
+                      ]),
                   child: Card(
-                    // color: tGray,
-                    // elevation: 3,
-                    margin: EdgeInsets.symmetric(vertical:5, horizontal: 3),
+                    color: Colors.grey[100],
+                    elevation: 5,
+                    margin: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
                     // width: 60.w,
                     // height: 40.h,
                     child: Column(
@@ -290,33 +303,41 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             children: [
                               /// Image Circle ///////////////////////////////////
                               Container(
-                                margin: EdgeInsets.only(left: 12, top:10),
+                                margin: EdgeInsets.only(left: 12, top: 10),
                                 width: 70,
                                 height: 70,
                                 decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.green,
-                                  image: DecorationImage(image: NetworkImage('https://placeimg.com/100/100'))
-                                ),
+                                    shape: BoxShape.circle,
+                                    color: Colors.green,
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://placeimg.com/100/100'))),
                               ),
-                              SizedBox(width: 10,),
+                              SizedBox(
+                                width: 10,
+                              ),
+
                               /// Text Group ////////////////////////////////////////
                               Expanded(
                                 child: Container(
                                   // color: Colors.teal,
-                                  margin: EdgeInsets.only(top:10, left: 12),
+                                  margin: EdgeInsets.only(top: 10, left: 12),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                     children: [
-                                      Text('Narashima, M.Psi',
+                                      Text(
+                                        'Narashima, M.Psi',
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 14.sp,
-                                            fontWeight: FontWeight.w500
-                                        ),
+                                            fontSize:
+                                            isTab(context) ? 9.sp : 14.sp,
+                                            fontWeight: FontWeight.w500),
                                       ),
-                                      Text("Psikolog",
+                                      Text(
+                                        "Psikolog",
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 12.sp,
+                                          fontSize:
+                                          isTab(context) ? 9.sp : 12.sp,
                                           fontWeight: FontWeight.w400,
                                           color: tlightGray,
                                         ),
@@ -327,13 +348,14 @@ class _PsikologScreenState extends State<PsikologScreen> {
                                   ),
                                 ),
                               ),
+
                               /// Icon Heart/////////////////////////////////////
                               Container(
                                 width: 30,
                                 height: 30,
                                 // color: tBlue,
                                 alignment: Alignment.center,
-                                margin: EdgeInsets.only(right: 12, top:10),
+                                margin: EdgeInsets.only(right: 12, top: 10),
                                 decoration: BoxDecoration(
                                   color: tSecondaryGary,
                                   borderRadius: BorderRadius.circular(10),
@@ -360,10 +382,15 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
                         ),
+
                         /// Next Available
                         Container(
-                          margin: EdgeInsets.only(right: 12, left: 12,top: 10),
-                          padding: EdgeInsets.only(left: 10,top: 5, bottom: 5,),
+                          margin: EdgeInsets.only(right: 12, left: 12, top: 10),
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            top: 5,
+                            bottom: 5,
+                          ),
                           // color: Colors.yellow,
                           decoration: BoxDecoration(
                             // boxShadow: [tCardBoxShadow],
@@ -374,34 +401,37 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                  'Next Available At',
-                                style: TextStyle(
-                                  fontSize: isTab(context) ? 9.sp : 10.sp,
-                                    fontWeight: FontWeight.w500,
-                                    color: tPrimaryColor
-                                ),
-                              ),
-                              Text(
-                                  '11:00-12:00',
+                                'Next Available At',
                                 style: TextStyle(
                                     fontSize: isTab(context) ? 9.sp : 10.sp,
-                                    color: tBlack,
+                                    fontWeight: FontWeight.w500,
+                                    color: tPrimaryColor),
+                              ),
+                              Text(
+                                '11:00-12:00',
+                                style: TextStyle(
+                                  fontSize: isTab(context) ? 9.sp : 10.sp,
+                                  color: tBlack,
                                 ),
                               ),
                             ],
                           ),
                         ),
+
                         /// BUTTON ////////////////////////////////
                         Container(
-                          margin: EdgeInsets.only(bottom: 12, right: 12,top: 5),
-                          width:double.infinity,
+                          margin:
+                          EdgeInsets.only(bottom: 12, right: 12, top: 5),
+                          width: double.infinity,
                           alignment: Alignment.bottomRight,
                           child: GestureDetector(
                             onTap: () {
                               Twl.navigateTo(
-                                  context, BookAppointmentScreen(index: 0,)
-                               );
-                              },
+                                  context,
+                                  BookAppointmentScreen(
+                                    index: 0,
+                                  ));
+                            },
                             child: Container(
                               margin: EdgeInsets.only(top: 10),
                               padding: EdgeInsets.symmetric(
@@ -429,19 +459,18 @@ class _PsikologScreenState extends State<PsikologScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: tlightGray,
-                        blurRadius: 5.0,
-                        offset: Offset(0,0)
-                      )
-                    ]
-                  ),
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [
+                        // BoxShadow(
+                        //     color: tlightGray,
+                        //     blurRadius: 8.0,
+                        //     offset: Offset(-1, -1),
+                        // )
+                      ]),
                   child: Card(
-                    // color: tGray,
-                    // elevation: 3,
-                    margin: EdgeInsets.symmetric(vertical:5, horizontal: 3),
+                    color: Colors.grey[100],
+                    elevation: 5,
+                    margin: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
                     // width: 60.w,
                     // height: 40.h,
                     child: Column(
@@ -452,33 +481,41 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             children: [
                               /// Image Circle ///////////////////////////////////
                               Container(
-                                margin: EdgeInsets.only(left: 12, top:10),
+                                margin: EdgeInsets.only(left: 12, top: 10),
                                 width: 70,
                                 height: 70,
                                 decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.green,
-                                  image: DecorationImage(image: NetworkImage('https://placeimg.com/100/100'))
-                                ),
+                                    shape: BoxShape.circle,
+                                    color: Colors.green,
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://placeimg.com/100/100'))),
                               ),
-                              SizedBox(width: 10,),
+                              SizedBox(
+                                width: 10,
+                              ),
+
                               /// Text Group ////////////////////////////////////////
                               Expanded(
                                 child: Container(
                                   // color: Colors.teal,
-                                  margin: EdgeInsets.only(top:10, left: 12),
+                                  margin: EdgeInsets.only(top: 10, left: 12),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                     children: [
-                                      Text('Narashima, M.Psi',
+                                      Text(
+                                        'Narashima, M.Psi',
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 14.sp,
-                                            fontWeight: FontWeight.w500
-                                        ),
+                                            fontSize:
+                                            isTab(context) ? 9.sp : 14.sp,
+                                            fontWeight: FontWeight.w500),
                                       ),
-                                      Text("Psikolog",
+                                      Text(
+                                        "Psikolog",
                                         style: TextStyle(
-                                          fontSize: isTab(context) ? 9.sp : 12.sp,
+                                          fontSize:
+                                          isTab(context) ? 9.sp : 12.sp,
                                           fontWeight: FontWeight.w400,
                                           color: tlightGray,
                                         ),
@@ -489,13 +526,14 @@ class _PsikologScreenState extends State<PsikologScreen> {
                                   ),
                                 ),
                               ),
+
                               /// Icon Heart/////////////////////////////////////
                               Container(
                                 width: 30,
                                 height: 30,
                                 // color: tBlue,
                                 alignment: Alignment.center,
-                                margin: EdgeInsets.only(right: 12, top:10),
+                                margin: EdgeInsets.only(right: 12, top: 10),
                                 decoration: BoxDecoration(
                                   color: tSecondaryGary,
                                   borderRadius: BorderRadius.circular(10),
@@ -522,10 +560,15 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
                         ),
+
                         /// Next Available
                         Container(
-                          margin: EdgeInsets.only(right: 12, left: 12,top: 10),
-                          padding: EdgeInsets.only(left: 10,top: 5, bottom: 5,),
+                          margin: EdgeInsets.only(right: 12, left: 12, top: 10),
+                          padding: EdgeInsets.only(
+                            left: 10,
+                            top: 5,
+                            bottom: 5,
+                          ),
                           // color: Colors.yellow,
                           decoration: BoxDecoration(
                             // boxShadow: [tCardBoxShadow],
@@ -536,34 +579,37 @@ class _PsikologScreenState extends State<PsikologScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                  'Next Available At',
-                                style: TextStyle(
-                                  fontSize: isTab(context) ? 9.sp : 10.sp,
-                                    fontWeight: FontWeight.w500,
-                                    color: tPrimaryColor
-                                ),
-                              ),
-                              Text(
-                                  '11:00-12:00',
+                                'Next Available At',
                                 style: TextStyle(
                                     fontSize: isTab(context) ? 9.sp : 10.sp,
-                                    color: tBlack,
+                                    fontWeight: FontWeight.w500,
+                                    color: tPrimaryColor),
+                              ),
+                              Text(
+                                '11:00-12:00',
+                                style: TextStyle(
+                                  fontSize: isTab(context) ? 9.sp : 10.sp,
+                                  color: tBlack,
                                 ),
                               ),
                             ],
                           ),
                         ),
+
                         /// BUTTON ////////////////////////////////
                         Container(
-                          margin: EdgeInsets.only(bottom: 12, right: 12,top: 5),
-                          width:double.infinity,
+                          margin:
+                          EdgeInsets.only(bottom: 12, right: 12, top: 5),
+                          width: double.infinity,
                           alignment: Alignment.bottomRight,
                           child: GestureDetector(
                             onTap: () {
                               Twl.navigateTo(
-                                  context, BookAppointmentScreen(index: 0,)
-                               );
-                              },
+                                  context,
+                                  BookAppointmentScreen(
+                                    index: 0,
+                                  ));
+                            },
                             child: Container(
                               margin: EdgeInsets.only(top: 10),
                               padding: EdgeInsets.symmetric(
@@ -589,6 +635,7 @@ class _PsikologScreenState extends State<PsikologScreen> {
                     ),
                   ),
                 ),
+
               ],
             ),
           ),

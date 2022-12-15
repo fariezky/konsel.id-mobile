@@ -117,8 +117,7 @@ class DrawerPage extends StatelessWidget {
                               height: 100,
                               width: 100,
                               decoration: BoxDecoration(
-                                color: tWhite,
-                                borderRadius: BorderRadius.circular(100),
+                                shape: BoxShape.circle,
                                 image: DecorationImage(
                                     image: AssetImage(Images.PROFILE), scale: 1),
                               ),

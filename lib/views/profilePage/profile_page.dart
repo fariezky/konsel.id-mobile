@@ -46,11 +46,12 @@ class ProfilePage extends StatelessWidget {
                   width: 80,
                   decoration: BoxDecoration(
                       color: tWhite,
+                      shape: BoxShape.circle,
                       image: DecorationImage(
                         scale: 1,
                         image: AssetImage(Images.PROFILE),
                       ),
-                      borderRadius: BorderRadius.circular(100),
+                      // borderRadius: BorderRadius.circular(100),
                       border: Border.all(width: 2, color: tWhite)),
                 ),
                 Text(

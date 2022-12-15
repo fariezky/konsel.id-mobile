@@ -18,9 +18,9 @@ class HomePage extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-          fontSize: isTab(context) ? 10.sp : 13.sp,
-          fontWeight: FontWeight.w500,
-          color: tBlue),
+          fontSize: isTab(context) ? 24.sp : 15.sp,
+          fontWeight: FontWeight.w600,
+          color: tPrimaryColor),
     );
   }
 
@@ -30,7 +30,9 @@ class HomePage extends StatelessWidget {
       child: Text(
         "View all",
         style: TextStyle(
-            fontSize: isTab(context) ? 7.sp : 10.sp,
+          decoration: TextDecoration.underline,
+            color: tPrimaryColor,
+            fontSize: isTab(context) ? 21.sp : 12.sp,
             fontWeight: FontWeight.w400),
       ),
     );
@@ -64,6 +66,7 @@ class HomePage extends StatelessWidget {
               },
               child: Image.asset(
                 Images.NOTIFICATION,
+                color: tPrimaryColor,
                 scale: 4,
               ),
             ),
@@ -75,97 +78,54 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  margin: EdgeInsets.only(left: 15, top: 10),
-                  child: Text(
-                    'Hi Lily',
-                    style: TextStyle(
-                        fontSize: isTab(context) ? 12.sp : 14.sp,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[800]),
+                Stack(alignment: Alignment.center, children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    // padding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+                    child: Container(
+                      alignment: Alignment.center,
+                      margin: EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                        boxShadow: [tCardBoxShadow],
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        image: DecorationImage(
+                            image: AssetImage(Images.BANNER2),
+                            fit: BoxFit.cover),
+                      ),
+                      width: isTab(context) ? 90.w : 92.w,
+                      height: isTab(context) ? 20.h : 25.h,
+                      child: Container(
+                        margin: EdgeInsets.only(top: 15, left: 20),
+                        child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Text(
+                              'Hi Karmila',
+                              style: TextStyle(
+                                  fontSize: isTab(context) ? 27.sp : 15.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 15),
-                  child: Text(
-                    'How are you today?',
-                    style: TextStyle(
-                        fontSize: isTab(context) ? 10.sp : 13.sp,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey[800]),
-                  ),
-                ),
-                // Container(
-                //   padding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
-                //   child: Card(
-                //     elevation: 0,
-                //     shape: RoundedRectangleBorder(
-                //         borderRadius: BorderRadius.circular(20)),
-                //     child: Container(
-                //       margin: EdgeInsets.only(left: 15),
-                //       decoration: BoxDecoration(
-                //         boxShadow: [tCardBoxShadow],
-                //         color: tWhite,
-                //         borderRadius: BorderRadius.circular(10),
-                //       ),
-                //       width: 360,
-                //       child: Column(
-                //         // crossAxisAlignment: CrossAxisAlignment.start,
-                //         // mainAxisAlignment: MainAxisAlignment.start,
-                //         children: [
-                //           /// BANNER IMAGE //////////////////////////
-                //           Padding(
-                //             padding: const EdgeInsets.symmetric(
-                //                 vertical: 15, horizontal: 15),
-                //             child: Column(
-                //               crossAxisAlignment: CrossAxisAlignment.start,
-                //               children: [
-                //                 Image.asset(Images.BANNER2),
-                //               ],
-                //             ),
-                //           ),
-                //           Column(
-                //             children: [
-                //               Container(
-                //                 margin: EdgeInsets.only(bottom: 10),
-                //                   alignment: Alignment.center,
-                //                   width:isTab(context)?30 : 150,
-                //                   height:isTab(context)?40 : 35,
-                //                   decoration: BoxDecoration(
-                //                       color: tPrimaryColor,
-                //                       borderRadius:
-                //                       BorderRadius.circular(10)),
-                //                   child: Text(
-                //                     "Mulai Test",
-                //                     style: TextStyle(color: tWhite,fontSize:  12.sp),
-                //                   )
-                //               ),
-                //             ],
-                //           )
-                //
-                //           // SizedBox(
-                //           //   height: 3.2.h,
-                //           // )
-                //         ],
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                SizedBox(
-                  height: 5,
-                ),
+                ]),
+
                 SizedBox(
                   height: 20,
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      titleWidget(
-                        context, 'Psikolog',
+                      titleWidget(context, 'Psikolog',
                       ),
                       viewallWidget(context, () {
                         Twl.navigateTo(context, PsikologScreen(),
@@ -182,7 +142,6 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }
