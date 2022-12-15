@@ -272,7 +272,7 @@ class Register_Screen extends StatelessWidget {
                           height: 15,
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 15,
                         ),
                         Divider(
                           color: tDividerColor,
