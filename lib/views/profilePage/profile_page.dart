@@ -9,6 +9,9 @@ import '../../constants/constants.dart';
 import 'package:flutter/material.dart';
 import '../../constants/imageConstant.dart';
 import '../logiPage/login_page.dart';
+import 'package:base_project_flutter/views/settings/about.dart';
+import 'package:base_project_flutter/views/settings/help.dart';
+import 'package:base_project_flutter/views/settings/privacy.dart';
 
 class ProfilePage extends StatelessWidget {
   ProfilePage({Key? key}) : super(key: key);
@@ -190,9 +193,28 @@ class ProfilePage extends StatelessWidget {
             // SizedBox(
             //   height: 10,
             // ),
-            nameWidgte('About', context),
-            nameWidgte('Privacy Policy', context),
-            nameWidgte('Help and Support', context),
+
+            GestureDetector(
+              onTap: () {
+                Twl.navigateTo(context, AboutScreen());
+              },
+              child: nameWidgte('About', context),
+            ),
+
+            GestureDetector(
+              onTap: () {
+                Twl.navigateTo(context, PrivacyScreen());
+              },
+              child: nameWidgte('Privacy Policy', context),
+            ),
+
+            GestureDetector(
+              onTap: () {
+                Twl.navigateTo(context, HelpScreen());
+              },
+              child: nameWidgte('Help and Support', context),
+            ),
+
             SizedBox(
               height: 10,
             ),

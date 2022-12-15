@@ -165,54 +165,7 @@ class Register_Screen extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-                        Padding(
-                          // height: 5.2.h,
-                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                          child: TextFormField(
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return "No. Telp harus diisi";
-                              } else {
-                                return null;
-                              }
-                            },
-                            controller: _phoneController,
-                            //_phoneNumberController,
-                            keyboardType: TextInputType.number,
-                            style: TextStyle(
-                                fontSize: isTab(context) ? 10.sp : 12.sp,
-                                color: Color(0xFF606060),
-                                fontWeight: FontWeight.w300),
-                            // inputFormatters: [
-                            //   LengthLimitingTextInputFormatter(10)
-                            // ],
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.only(left: 10),
-                              hintText: "No. Telp",
-                              // prefix: Text('+91 ',style: TextStyle(color: tBlack),),
 
-                              hintStyle: TextStyle(
-                                  fontSize: isTab(context) ? 9.sp : 11.sp,
-                                  color: Color(0xFF606060),
-                                  fontWeight: FontWeight.w300),
-                              // hintText: '1234567890',
-                              fillColor: Color(0xFFFAFAFA),
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(10.0),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: tBorderColor, width: 1.5),
-                                  borderRadius: BorderRadius.circular(8)),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
                         Padding(
                           // height: 5.2.h,
                           padding: const EdgeInsets.symmetric(horizontal: 0.0),
@@ -314,54 +267,7 @@ class Register_Screen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Padding(
-                          // height: 5.2.h,
-                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                          child: TextFormField(
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return "NPSN/asal sekolah harus diisi";
-                              } else {
-                                return null;
-                              }
-                            },
-                            controller: _schoolNameController,
-                            //_phoneNumberController,
-                            keyboardType: TextInputType.name,
-                            style: TextStyle(
-                                fontSize: isTab(context) ? 10.sp : 12.sp,
-                                color: Color(0xFF606060),
-                                fontWeight: FontWeight.w300),
-                            // inputFormatters: [
-                            //   LengthLimitingTextInputFormatter(10)
-                            // ],
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.only(left: 10),
-                              hintText: "NPSN/asal sekolah",
-                              // prefix: Text('+91 ',style: TextStyle(color: tBlack),),
 
-                              hintStyle: TextStyle(
-                                  fontSize: isTab(context) ? 9.sp : 11.sp,
-                                  color: Color(0xFF606060),
-                                  fontWeight: FontWeight.w300),
-                              // hintText: '1234567890',
-                              fillColor: Color(0xFFFAFAFA),
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(10.0),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: tBorderColor, width: 1.5),
-                                  borderRadius: BorderRadius.circular(8)),
-                            ),
-                          ),
-                        ),
                         SizedBox(
                           height: 15,
                         ),

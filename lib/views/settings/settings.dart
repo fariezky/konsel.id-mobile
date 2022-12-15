@@ -3,6 +3,11 @@ import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:base_project_flutter/views/settings/about.dart';
+import 'package:base_project_flutter/views/settings/help.dart';
+import 'package:base_project_flutter/views/settings/privacy.dart';
+
+import '../../globalFuctions/globalFunctions.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -53,7 +58,15 @@ class _SettingPageState extends State<SettingPage> {
           SizedBox(
             height: 20,
           ),
-          nameWidgte('About'),
+
+
+          GestureDetector(
+            onTap: () {
+              Twl.navigateTo(context, AboutScreen());
+            },
+            child: nameWidgte('About'),
+          ),
+
           nameWidgte('Privacy Policy'),
           nameWidgte('Help and Support'),
           SizedBox(

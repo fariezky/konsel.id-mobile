@@ -224,7 +224,7 @@ class TermConditionPage extends StatelessWidget {
         style: TextStyle(
             fontSize: isTab(context) ? 12.sp : 14.sp,
             fontWeight: FontWeight.bold,
-            color: tBlackColor
+            color: tBlackColor,
         ),
       ),
     );

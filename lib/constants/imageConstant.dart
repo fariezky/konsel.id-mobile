@@ -32,6 +32,9 @@ class Images {
   static const String APPOINTMENTIMAGE = 'assets/images/appointmentImage.png';
   static const String PROFILEIMAGE = 'assets/images/profileImage.png';
   static const String EDITFIX = 'assets/images/edit_fix.png';
+  static const String HELP = 'assets/images/help.png';
+  static const String PRIVACY = 'assets/images/privacy.png';
+  static const String KISAH = 'assets/images/kisah.png';
   static const String PASSWORDCOMPLETE = 'assets/images/password_complete.png';
   static const String PROFILE = 'assets/images/profile.png';
   static const String ANEMIA = 'assets/images/anemia.png';
