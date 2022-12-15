@@ -1,7 +1,7 @@
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/views/calendar/calendar_widget.dart';
-import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog_page.dart';
+import 'package:base_project_flutter/views/Psikolog_Page/topPsikologPage/top_psikolog_page.dart';
 import 'package:base_project_flutter/views/homePage/drawer.dart';
 import 'package:base_project_flutter/views/notification/notification_page.dart';
 import 'package:flutter/material.dart';
@@ -88,11 +88,14 @@ class HomePage extends StatelessWidget {
                       margin: EdgeInsets.only(left: 15),
                       decoration: BoxDecoration(
                         boxShadow: [tCardBoxShadow],
+
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
                             image: AssetImage(Images.BANNER2),
-                            fit: BoxFit.cover),
+                            fit: BoxFit.cover,
+                           colorFilter: ColorFilter.linearToSrgbGamma(),
+                        ),
                       ),
                       width: isTab(context) ? 90.w : 92.w,
                       height: isTab(context) ? 20.h : 25.h,

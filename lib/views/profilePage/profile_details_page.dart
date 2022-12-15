@@ -299,7 +299,7 @@ class ProfileDetailsPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 40, vertical: 10),
+                                  horizontal: 30, vertical: 10),
                               child: Center(
                                 child: Text(
                                   'Simpan',

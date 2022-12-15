@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../constants/constants.dart';
 import '../../constants/imageConstant.dart';
-import '../FavoritePage/favorite_psikolog_screen.dart';
+import '../Psikolog_Page/favoritePsikolog/favorite_psikolog_screen.dart';
 import '../appointment/my_appoinment.dart';
 import '../profilePage/profile_page.dart';
 class BottomNavigation extends StatefulWidget {

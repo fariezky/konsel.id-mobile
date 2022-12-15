@@ -1,8 +1,7 @@
 import 'package:base_project_flutter/constants/constants.dart';
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/responsive.dart';
-import 'package:base_project_flutter/views/bookAppointment/components/todayPage.dart';
-import 'package:base_project_flutter/views/bookAppointment/components/tomorrowPage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -104,8 +103,7 @@ class _VideoConsultPageState extends State<VideoConsultPage> {
                   Expanded(
                     child: Container(
                       child: TabBarView(children: [
-                        TodayPageScreen(),
-                        TomorrowPage(),
+
                       ]),
                     ),
                   ),

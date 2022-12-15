@@ -2,7 +2,6 @@ import 'package:base_project_flutter/constants/constants.dart';
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/responsive.dart';
-import 'package:base_project_flutter/views/bookAppointment/components/bookAppointmentPage.dart';
 import 'package:base_project_flutter/views/bookAppointment/components/videoConsultPage.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
