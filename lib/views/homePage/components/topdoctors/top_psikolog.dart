@@ -19,15 +19,17 @@ class _TopPsikologState extends State<TopPsikolog> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       margin: EdgeInsets.only(left: 20),
       height: 31.h,
       child: ListView.builder(
-          itemCount: 4,
+          itemCount: 2,
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           physics: ScrollPhysics(),
           itemBuilder: (BuildContext context, int index) {
             return Container(
+              color: tBlue,
               margin: EdgeInsets.only(left: 7),
               child: GestureDetector(
                 onTap: () {
@@ -41,7 +43,7 @@ class _TopPsikologState extends State<TopPsikolog> {
                   child: Container(
                     decoration: BoxDecoration(
                       boxShadow: [tCardBoxShadow],
-                      color: tWhite,
+                      color: Colors.cyanAccent,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Stack(
@@ -49,9 +51,7 @@ class _TopPsikologState extends State<TopPsikolog> {
                         Container(
                           width: 60.w,
                           height: 40.h,
-                          padding: EdgeInsets.only(
-                            left: 15,
-                            top: 40,
+                          padding: EdgeInsets.only(left: 15, top: 40,
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +59,7 @@ class _TopPsikologState extends State<TopPsikolog> {
                               SizedBox(
                                 width: 32.w,
                                 child: Text(
-                                  'Dr. Narasimha Rao',
+                                  'Anisha Putri Amalia, M.Psi',
                                   style: TextStyle(
                                     fontSize: isTab(context) ? 9.sp : 13.sp,
                                     fontWeight: FontWeight.w600,
@@ -73,7 +73,7 @@ class _TopPsikologState extends State<TopPsikolog> {
                                 style: TextStyle(
                                     fontSize: isTab(context) ? 8.sp : 10.sp,
                                     fontWeight: FontWeight.w500,
-                                    color: tGray),
+                                    color: tGray2),
                               ),
                               SizedBox(height: 5),
                               Text(
@@ -130,7 +130,7 @@ class _TopPsikologState extends State<TopPsikolog> {
                           ),
                         ),
                         Positioned(
-                          left: 110,
+                          left: 100,
                           top: 30,
                           child: Image.asset(
                             Images.DOCTOR,

@@ -1,6 +1,7 @@
 import 'package:base_project_flutter/constants/imageConstant.dart';
 import 'package:base_project_flutter/globalFuctions/globalFunctions.dart';
 import 'package:base_project_flutter/views/calendar/calendar_widget.dart';
+import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog_page.dart';
 import 'package:base_project_flutter/views/homePage/drawer.dart';
 import 'package:base_project_flutter/views/notification/notification_page.dart';
 import 'package:flutter/material.dart';
@@ -96,7 +97,7 @@ class HomePage extends StatelessWidget {
                       width: isTab(context) ? 90.w : 92.w,
                       height: isTab(context) ? 20.h : 25.h,
                       child: Container(
-                        margin: EdgeInsets.only(top: 15, left: 20),
+                        margin: EdgeInsets.only(top: 30, left: 25),
                         child: Column(
                           // mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -134,7 +135,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                TopPsikolog(),
+                TopPsikologScreen(),
                 // CalendarWidget(),
                 SizedBox(
                   height: 100,

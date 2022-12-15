@@ -114,6 +114,8 @@ class Images {
   static const String SEARCH1 = 'assets/icons/search1.png';
   static const String BANNER2 = 'assets/images/banner2.png';
   static const String LOGOKONSEL = 'assets/icons/logokonsel2.png';
+  static const String PSIKOLOG1 = 'assets/images/psikolog1.jpeg';
+  static const String PSIKOLOG2 = 'assets/images/psikolog2.jpeg';
 
 
 }

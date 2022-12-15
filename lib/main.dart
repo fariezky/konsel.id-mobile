@@ -8,6 +8,7 @@ import 'package:base_project_flutter/views/calendar/calendar_event.dart';
 import 'package:base_project_flutter/views/homePage/components/homepageservices.dart';
 import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog.dart';
 import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog_details_page.dart';
+import 'package:base_project_flutter/views/homePage/components/topdoctors/top_psikolog_page.dart';
 import 'package:base_project_flutter/views/homePage/homePage.dart';
 import 'package:base_project_flutter/views/onBoardingpage/onBoardingPage.dart';
 import 'package:base_project_flutter/views/profilePage/edit_details_page.dart';
